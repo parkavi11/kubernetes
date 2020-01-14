@@ -7,7 +7,7 @@ import ballerina/kubernetes;
 }
 @kubernetes:Deployment {}
 @http:ServiceConfig {
-    basePath: "/helloWorld"
+    basePath: "/hello-world"
 }
 service helloWorld on new http:Listener(9090) {
     resource function sayHello(http:Caller outboundEP, http:Request request) {
